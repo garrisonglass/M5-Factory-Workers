@@ -1,8 +1,7 @@
 // M5 Factory Workers.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
-#include <iostream>
-#include <iostream>
+#include <iostream> 
 #include "Employee.h"
 #include "ProductionWorker.h"
 #include "ShiftSupe.h"
@@ -39,3 +38,9 @@ int main()
 
 	return 0;
 }
+// Employee
+// |
+// |- ProductionWorker
+// |      |- TeamLead
+// |
+// |- ShiftSupe

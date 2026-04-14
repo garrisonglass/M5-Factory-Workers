@@ -129,9 +129,11 @@
   <ItemGroup>
     <ClCompile Include="Employee.cpp" />
     <ClCompile Include="M5 Factory Workers.cpp" />
+    <ClCompile Include="ProductionWorker.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Employee.h" />
+    <ClInclude Include="ProductionWorker.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -130,10 +130,12 @@
     <ClCompile Include="Employee.cpp" />
     <ClCompile Include="M5 Factory Workers.cpp" />
     <ClCompile Include="ProductionWorker.cpp" />
+    <ClCompile Include="ShiftSupe.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Employee.h" />
     <ClInclude Include="ProductionWorker.h" />
+    <ClInclude Include="ShiftSupe.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

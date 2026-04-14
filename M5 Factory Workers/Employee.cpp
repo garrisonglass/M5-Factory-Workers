@@ -11,7 +11,7 @@ Employee::Employee(const string& name, int EmployeeID, const string& startingDat
 
 //Accessors
 string Employee::getName() const { return name; }
-int Employee::getEmployeeID() const { return EmployeeID; }
+int    Employee::getEmployeeID() const { return EmployeeID; }
 string Employee::getStartingDate() const { return startingDate; }
 
 //Mustators

@@ -18,6 +18,8 @@ public:
 
 	int getShift() const;
 	double getPayRate() const;
+
+	void printProductionWorker() const;
 };
 
 #endif

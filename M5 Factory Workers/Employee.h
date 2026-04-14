@@ -14,11 +14,11 @@ private:
 public:
 	//Constructor
 	Employee();
-	Employee(const string& time, int EmployeeID, const string& startingDate);
+	Employee(const string& name, int EmployeeID, const string& startingDate);
 
 	//Accessors
 	string getName() const;
-	int getEmployeeID() const;
+	int    getEmployeeID() const;
 	string getStartingDate() const;
 
 	//Mutators

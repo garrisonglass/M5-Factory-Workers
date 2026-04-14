@@ -1,4 +1,6 @@
 #include "ProductionWorker.h"
+#include <iostream>
+using namespace std;
 
 //Default constructor
 ProductionWorker::ProductionWorker() : Employee() 
@@ -19,4 +21,11 @@ void ProductionWorker::setPayRate(double payRate) { this->payRate = payRate; }
 int ProductionWorker::getShift() const { return shift; }
 
 double ProductionWorker::getPayRate() const { return payRate; }	
+
+void ProductionWorker::printProductionWorker() const {
+	printEmployee();
+	cout << "Shift: " << (getShift() == 1 ? "Day" : "Night") << endl;
+	cout << "Pay Rate: $" << getPayRate() << endl;
+}
+
 

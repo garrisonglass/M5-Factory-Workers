@@ -4,19 +4,11 @@
 using namespace std;
 
 //Default constructor
-ShiftSupe::ShiftSupe() : Employee() 
-{
-	salary = 0.0;
-	bonus = 0.0;
-}
+ShiftSupe::ShiftSupe() : Employee(), salary(0.0), bonus(0.0) {}
 
 //Overloaded constructor
 ShiftSupe::ShiftSupe(string name, int EmployeeID, string startingDate, double salary, double bonus)
-	: Employee(name, EmployeeID, startingDate)
-{
-	this->salary = salary;
-	this->bonus = bonus;
-}
+	: Employee(name, EmployeeID, startingDate), salary(salary), bonus(bonus) {}
 
 void ShiftSupe::setSalary(double salary) { this->salary = salary; }
 

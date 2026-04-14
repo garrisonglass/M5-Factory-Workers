@@ -17,12 +17,12 @@ public:
 	TeamLead(const string& name, int EmployeeID, const string& startingDate, int shift, double payRate, double monthlyBonus, int requiredTrainingHours, int attendedTrainingHours);
 	//Accessors	
 	double getMonthlyBonus() const;
-	int setRequiredTrainingHours() const;
-	int setAttendedTrainingHours() const;
+	int getRequiredTrainingHours() const;
+	int getAttendedTrainingHours() const;
 	//Mutators
 	void setMonthlyBonus(double bonus);
-	void getRequiredTrainingHours(int hours);
-	void getAttendedTrainingHours(int hours);
+	void setRequiredTrainingHours(int hours);
+	void setAttendedTrainingHours(int hours);
 	//Print function
 	void printTeamLead() const;
 };

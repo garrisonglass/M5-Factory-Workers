@@ -23,6 +23,6 @@ void Employee::setStartingDate(const string& startingDate) { this->startingDate 
 void Employee::printEmployee() const
 {
 	cout << "Employee Name: " << name         << endl;
-	cout << "Employee ID: "   << EmployeeID   << endl;
+	cout << "Employee ID:   " << EmployeeID   << endl;
 	cout << "Starting Date: " << startingDate << endl;
 }

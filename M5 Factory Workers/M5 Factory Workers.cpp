@@ -14,3 +14,9 @@ int main()
 {
 	//Creat an Employee object
 	Employee emp("John Doe", 12345, "2020-01-01");
+	cout << "Employee Information:" << endl;
+	emp.printEmployee();
+	cout << endl;
+
+	return 0;
+}

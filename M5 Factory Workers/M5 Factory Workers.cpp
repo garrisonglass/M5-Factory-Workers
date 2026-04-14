@@ -30,5 +30,12 @@ int main()
 	supervisor.printShiftSupe();
 	cout << endl;
 
+	//Create a Team Lead object
+	TeamLead teamLead("Colby West", 98765, "2017-07-20", 2, 18.75, 2000.0, 40, 40);
+	cout << "Team Lead Information:" << endl;
+	teamLead.printTeamLead();
+	cout << endl;	
+
+
 	return 0;
 }

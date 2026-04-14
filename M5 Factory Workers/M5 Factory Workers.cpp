@@ -18,5 +18,17 @@ int main()
 	emp.printEmployee();
 	cout << endl;
 
+	//Create a ProductionWorker object
+	ProductionWorker worker("Jane Smith", 54321, "2019-05-15", 1, 15.50);
+	cout << "Production Worker Information:" << endl;
+	worker.printProductionWorker();
+	cout << endl;
+
+	//Create a Shift Supervisor object
+	ShiftSupe supervisor("Juson Davis", 67890, "2018-03-10", 50000.0, 5000.0);
+	cout << "Shift Supervisor Information:" << endl;
+	supervisor.printShiftSupe();
+	cout << endl;
+
 	return 0;
 }

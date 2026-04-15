@@ -10,8 +10,8 @@ ProductionWorker::ProductionWorker() : Employee()
 }
 
 //Overloaded constructor
-ProductionWorker::ProductionWorker(const string& name, int EmployeeID, const string& startingDate, int shift, double payRate) 
-	: Employee(name, EmployeeID, startingDate), shift(shift), payRate(payRate) {
+ProductionWorker::ProductionWorker(const string& name, int EmployeeID, const string& HireDate, int shift, double payRate) 
+	: Employee(name, EmployeeID, HireDate), shift(shift), payRate(payRate) {
 }
 
 void ProductionWorker::setShift(int shift) { this->shift = shift; }

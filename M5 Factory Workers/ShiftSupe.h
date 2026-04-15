@@ -12,7 +12,7 @@ public:
 
 	//Default constructor
 	ShiftSupe();
-	ShiftSupe(string name, int EmployeeID, string startingDate, double salary, double bonus);
+	ShiftSupe(string name, int EmployeeID, string HireDate, double salary, double bonus);
 
 	//Mutators
 	void setSalary(double salary);

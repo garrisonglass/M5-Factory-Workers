@@ -7,8 +7,8 @@ using namespace std;
 TeamLead::TeamLead() : ProductionWorker(), monthlyBonus(0.0), requiredTrainingHours(0), attendedTrainingHours(0) {}
 
 //Fully parameterized constructor
-TeamLead::TeamLead(const string& name, int EmployeeID, const string& startingDate, int shift, double payRate, double monthlyBonus, int requiredTrainingHours, int attendedTrainingHours)
-	: ProductionWorker(name, EmployeeID, startingDate, shift, payRate), 
+TeamLead::TeamLead(const string& name, int EmployeeID, const string& HireDate, int shift, double payRate, double monthlyBonus, int requiredTrainingHours, int attendedTrainingHours)
+	: ProductionWorker(name, EmployeeID, HireDate, shift, payRate), 
 	  monthlyBonus(monthlyBonus), 
 	  requiredTrainingHours(requiredTrainingHours), 
 	  attendedTrainingHours(attendedTrainingHours) {}

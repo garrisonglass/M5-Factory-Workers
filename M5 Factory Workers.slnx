@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="M5 Factory Workers/M5 Factory Workers.vcxproj" />
+  <Project Path="M5 Factory Workers/M5 Factory Workers.vcxproj" Id="be6ab34a-a817-4578-be9d-cc07b71afaa6" />
 </Solution>

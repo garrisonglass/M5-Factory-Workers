@@ -11,7 +11,7 @@ class ProductionWorker : public Employee
 
 public:
 	ProductionWorker();
-	ProductionWorker(const string& name, int EmployeeID, const string& startingDate, int shift, double payRate);
+	ProductionWorker(const string& name, int EmployeeID, const string& HireDate, int shift, double payRate);
 
 	void setShift(int shift);
 	void setPayRate(double payRate);

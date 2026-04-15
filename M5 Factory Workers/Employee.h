@@ -9,12 +9,12 @@ class Employee
 private:
 	string name;
 	int EmployeeID;
-	string startingDate;
+	string HireDate;
 
 public:
 	//Constructor
 	Employee();
-	Employee(const string& name, int EmployeeID, const string& startingDate);
+	Employee(const string& name, int EmployeeID, const string& HireDate);
 
 	//Accessors
 	string getName() const;
@@ -24,7 +24,7 @@ public:
 	//Mutators
 	void setName(const string& name);
 	void setEmployeeID(int EmployeeID);
-	void setStartingDate(const string& startingDate);
+	void setStartingDate(const string& HireDate);
 
 	//Print function
 	void printEmployee() const;

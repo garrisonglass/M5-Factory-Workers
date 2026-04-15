@@ -14,7 +14,7 @@ private:
 public:
 	//Constructor	
 	TeamLead();
-	TeamLead(const string& name, int EmployeeID, const string& startingDate, int shift, double payRate, double monthlyBonus, int requiredTrainingHours, int attendedTrainingHours);
+	TeamLead(const string& name, int EmployeeID, const string& HireDate, int shift, double payRate, double monthlyBonus, int requiredTrainingHours, int attendedTrainingHours);
 	//Accessors	
 	double getMonthlyBonus() const;
 	int getRequiredTrainingHours() const;

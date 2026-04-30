@@ -10,6 +10,11 @@ class ProductionWorker : public Employee
 		double payRate;
 
 public:
+	//Exception
+	class InvalideShift {};
+	class InvalidePayRate {};
+	
+	//Constructor
 	ProductionWorker();
 	ProductionWorker(const string& name, int EmployeeID, const string& HireDate, int shift, double payRate);
 

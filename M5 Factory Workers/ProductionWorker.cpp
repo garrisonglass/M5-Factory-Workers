@@ -11,7 +11,15 @@ ProductionWorker::ProductionWorker() : Employee()
 
 //Overloaded constructor
 ProductionWorker::ProductionWorker(const string& name, int EmployeeID, const string& HireDate, int shift, double payRate) 
-	: Employee(name, EmployeeID, HireDate), shift(shift), payRate(payRate) {
+	: Employee(name, EmployeeID, HireDate), shift(shift), payRate(payRate) 
+{
+	if (shift != 1 && shift != 2)
+		throw InvalideShift();
+	if (payRate < 0)
+		throw InvalidePayRate();
+	
+	    this->shift   = shift;
+		this->payRate = payRate;
 }
 
 void ProductionWorker::setShift(int shift) { this->shift = shift; }
@@ -22,7 +30,8 @@ int ProductionWorker::getShift() const { return shift; }
 
 double ProductionWorker::getPayRate() const { return payRate; }	
 
-void ProductionWorker::printProductionWorker() const {
+void ProductionWorker::printProductionWorker() const 
+{
 	printEmployee();
 	cout << "Shift: " << (getShift() == 1 ? "Day" : "Night") << endl;
 	cout << "Pay Rate: $" << getPayRate() << endl;

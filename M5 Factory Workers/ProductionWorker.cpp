@@ -22,9 +22,19 @@ ProductionWorker::ProductionWorker(const string& name, int EmployeeID, const str
 		this->payRate = payRate;
 }
 
-void ProductionWorker::setShift(int shift) { this->shift = shift; }
+void ProductionWorker::setShift(int shift) 
+{ 
+	if (shift != 1 && shift != 2)
+		throw InvalideShift();
+	this->shift = shift; 
+}
 
-void ProductionWorker::setPayRate(double payRate) { this->payRate = payRate; }
+void ProductionWorker::setPayRate(double payRate) 
+{
+	if (payRate < 0)
+		throw InvalidePayRate();
+	this->payRate = payRate; 
+}
 
 int ProductionWorker::getShift() const { return shift; }
 

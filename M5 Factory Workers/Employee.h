@@ -12,6 +12,9 @@ private:
 	string HireDate;
 
 public:
+	//Exception class
+	class InvalidEmployeeID {};
+
 	//Constructor
 	Employee();
 	Employee(const string& name, int EmployeeID, const string& HireDate);

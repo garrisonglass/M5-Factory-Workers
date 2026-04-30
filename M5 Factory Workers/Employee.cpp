@@ -22,7 +22,12 @@ string Employee::getStartingDate() const { return HireDate; }
 
 //Mustators
 void Employee::setName(const string& name) { this->name = name; }
-void Employee::setEmployeeID(int EmployeeID) { this->EmployeeID = EmployeeID; }
+void Employee::setEmployeeID(int EmployeeID) 
+{
+	if (EmployeeID < 0 || EmployeeID > 9999) 
+		throw InvalidEmployeeID();
+	this->EmployeeID = EmployeeID;
+}
 void Employee::setStartingDate(const string& startingDate) { this->HireDate = startingDate; }
 
 //Print function

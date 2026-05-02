@@ -14,9 +14,9 @@ ProductionWorker::ProductionWorker(const string& name, int EmployeeID, const str
 	: Employee(name, EmployeeID, HireDate), shift(shift), payRate(payRate) 
 {
 	if (shift != 1 && shift != 2)
-		throw InvalideShift();
+		throw InvalidShift();
 	if (payRate < 0)
-		throw InvalidePayRate();
+		throw InvalidPayRate();
 	
 	    this->shift   = shift;
 		this->payRate = payRate;
@@ -25,14 +25,14 @@ ProductionWorker::ProductionWorker(const string& name, int EmployeeID, const str
 void ProductionWorker::setShift(int shift) 
 { 
 	if (shift != 1 && shift != 2)
-		throw InvalideShift();
+		throw InvalidShift();
 	this->shift = shift; 
 }
 
 void ProductionWorker::setPayRate(double payRate) 
 {
 	if (payRate < 0)
-		throw InvalidePayRate();
+		throw InvalidPayRate();
 	this->payRate = payRate; 
 }
 

@@ -10,9 +10,10 @@
 
 using namespace std;
 
-void createProcutionWorker();
+void createProductionWorker();
 void createShiftSupervisor();
 void createTeamLead();
+
 
 int main()
 {
@@ -32,7 +33,7 @@ int main()
 		switch (choice)
 		{
 		case 1:
-			createProcutionWorker();//Create Production Worker
+			createProductionWorker();//Create Production Worker
 			break;
 		case 2:
 			createShiftSupervisor();//Create Shift Supervisor 
@@ -100,9 +101,119 @@ void createProductionWorker()
 	}
 }
 
+void createShiftSupervisor()
+{
+	string name, date;
+	int id;
+	double salary, bonus;
+	
+	while (true)
+	{
+		try
+		{
+			cout << "\n--- Enter Shift Supervisor Information ---\n";
+			cout << "Enter name: ";
+			getline(cin, name);
+			
+			cout << "Enter employee ID (0-9999): ";
+			cin >> id;
+			cin.ignore();
+			
+			cout << "Enter hire date (YYYY-MM-DD): ";
+			getline(cin, date);
+			
+			cout << "Enter annual salary: ";
+			cin >> salary;
+			cin.ignore();
+			
+			cout << "Enter annual bonus: ";
+			cin >> bonus;
+			cin.ignore();
+			
+			ShiftSupe supervisor(name, id, date, salary, bonus);
+			
+			cout << "\nShift Supervisor Information:\n";
+			supervisor.printShiftSupe();
+			break;
+		}
+		catch (const Employee::InvalidEmployeeID&)
+		{
+			cout << "Error: Invalid employee ID. Please enter a value between 0 and 9999.\n";
+		}
+		catch (const ShiftSupe::InvalidSalary&)
+		{
+			cout << "Error: Invalid salary. Please enter a non-negative value.\n";
+		}
+		catch (const ShiftSupe::InvalidBonus&)
+		{
+			cout << "Error: Invalid bonus. Please enter a non-negative value.\n";
+		}
+	}
+}	
 
-
-
+void createTeamLead()
+{
+	string name, date;
+	int id, shift, requiredHours, attendedHours;
+	double payRate, monthlyBonus;
+	while (true)
+	{
+		try
+		{
+			cout << "\n--- Enter Team Lead Information ---\n";
+			cout << "Enter name: ";
+			getline(cin, name);
+			cout << "Enter employee ID (0-9999): ";
+			cin >> id;
+			cin.ignore();
+			cout << "Enter hire date (YYYY-MM-DD): ";
+			getline(cin, date);
+			cout << "Enter shift (1 for day, 2 for night): ";
+			cin >> shift;
+			cin.ignore();
+			cout << "Enter hourly pay rate: ";
+			cin >> payRate;
+			cin.ignore();
+			cout << "Enter monthly bonus: ";
+			cin >> monthlyBonus;
+			cin.ignore();
+			cout << "Enter required training hours: ";
+			cin >> requiredHours;
+			cin.ignore();
+			cout << "Enter attended training hours: ";
+			cin >> attendedHours;
+			cin.ignore();
+			TeamLead teamLead(name, id, date, shift, payRate, monthlyBonus, requiredHours, attendedHours);
+			cout << "\nTeam Lead Information:\n";
+			teamLead.printTeamLead();
+			break;
+		}
+		catch (const Employee::InvalidEmployeeID&)
+		{
+			cout << "Error: Invalid employee ID. Please enter a value between 0 and 9999.\n";
+		}
+		catch (const ProductionWorker::InvalidShift&)
+		{
+			cout << "Error: Invalid shift. Please enter 1 (Day) or 2 (Night).\n";
+		}
+		catch (const ProductionWorker::InvalidPayRate&)
+		{
+			cout << "Error: Invalid pay rate. Please enter a non-negative value.\n";
+		}
+		catch (const TeamLead::InvalidMonthlyBonus&)
+		{
+			cout << "Error: Invalid monthly bonus. Please enter a non-negative value.\n";
+		}
+		catch (const TeamLead::InvalidTrainingHours&)
+		{
+			cout << "Error: Invalid required training hours. Please enter a non-negative value.\n";
+		}
+		catch (const TeamLead::InvalidAttendedTrainingHours&)
+		{
+			cout << "Error: Invalid attended training hours. Please enter a value between 0 and required training hours.\n";
+		}
+	}
+}
 
 
 

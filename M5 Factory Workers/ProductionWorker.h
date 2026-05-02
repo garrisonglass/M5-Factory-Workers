@@ -11,8 +11,8 @@ class ProductionWorker : public Employee
 
 public:
 	//Exception
-	class InvalideShift {};
-	class InvalidePayRate {};
+	class InvalidShift {};
+	class InvalidPayRate {};
 	
 	//Constructor
 	ProductionWorker();

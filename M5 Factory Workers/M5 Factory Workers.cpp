@@ -56,10 +56,7 @@ void createProductionWorker()
 	int id, shift;
 	double pay;
 
-	while (true)
-	{
-		try
-		{
+
 			cout << "\n--- Enter Production Worker Information ---\n";
 
 			cout << "Enter name: ";
@@ -79,6 +76,11 @@ void createProductionWorker()
 			cout << "Enter hourly pay rate: ";
 			cin >> pay;
 			cin.ignore();
+
+	while (true)
+	{
+		try
+		{
 
 			ProductionWorker worker(name, id, date, shift, pay);
 			

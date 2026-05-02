@@ -16,8 +16,8 @@ Employee::Employee(const string& name, int EmployeeID, const string& startingDat
 }
 
 //Accessors
-string Employee::getName() const { return name; }
-int    Employee::getEmployeeID() const { return EmployeeID; }
+string Employee::getName()         const { return name; }
+int    Employee::getEmployeeID()   const { return EmployeeID; }
 string Employee::getStartingDate() const { return HireDate; }
 
 //Mustators
@@ -35,5 +35,5 @@ void Employee::printEmployee() const
 {
 	cout << "Employee Name: " << name         << endl;
 	cout << "Employee ID:   " << EmployeeID   << endl;
-	cout << "Hire Date: " << HireDate << endl;
+	cout << "Hire Date: "     << HireDate     << endl;
 }

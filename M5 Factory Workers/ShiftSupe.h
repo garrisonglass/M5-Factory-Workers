@@ -9,6 +9,9 @@ class ShiftSupe : public Employee
 	double bonus;
 
 public:
+	//Exception
+	class InvalidSalary {};
+	class InvalidBonus {};
 
 	//Default constructor
 	ShiftSupe();

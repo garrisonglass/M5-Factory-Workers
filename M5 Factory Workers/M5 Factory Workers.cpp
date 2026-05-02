@@ -91,14 +91,20 @@ void createProductionWorker()
 		catch (const Employee::InvalidEmployeeID&)
 		{
 			cout << "Error: Invalid employee ID. Please enter a value between 0 and 9999.\n";
+			cin >> id;
+			cin.ignore();
 		}
 		catch (const ProductionWorker::InvalidShift&)
 		{
 			cout << "Error: Invalid shift. Please enter 1 (Day) or 2 (Night).\n";
+			cin >> shift;
+			cin.ignore();
 		}
 		catch (const ProductionWorker::InvalidPayRate&)
 		{
 			cout << "Error: Invalid pay rate. Please enter a non-negative value.\n";
+			cin >> pay;
+			cin.ignore();
 		}
 	}
 }

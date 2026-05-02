@@ -10,7 +10,7 @@ Employee::Employee(const string& name, int EmployeeID, const string& startingDat
 	: name(name), EmployeeID(EmployeeID), HireDate(startingDate) 
 {
 	if (EmployeeID < 0 || EmployeeID > 9999) 
-		throw InvalidEmployeeID();
+	 throw InvalidEmployeeID();
 	this->EmployeeID = EmployeeID;
 	
 }

@@ -11,7 +11,18 @@ TeamLead::TeamLead(const string& name, int EmployeeID, const string& HireDate, i
 	: ProductionWorker(name, EmployeeID, HireDate, shift, payRate), 
 	  monthlyBonus(monthlyBonus), 
 	  requiredTrainingHours(requiredTrainingHours), 
-	  attendedTrainingHours(attendedTrainingHours) {}
+	  attendedTrainingHours(attendedTrainingHours) 
+{
+	if (monthlyBonus < 0)
+		throw InvalidMonthlyBonus();
+	if (requiredTrainingHours < 0)
+		throw InvalidTrainingHours();
+	if (attendedTrainingHours < 0 || attendedTrainingHours > requiredTrainingHours)
+		throw InvalidAttendedTrainingHours();
+	this->monthlyBonus = monthlyBonus;
+	this->requiredTrainingHours = requiredTrainingHours;
+	this->attendedTrainingHours = attendedTrainingHours;
+}
 
 //Accessors
 double TeamLead::getMonthlyBonus() const { return monthlyBonus; }
@@ -19,9 +30,24 @@ int    TeamLead::getRequiredTrainingHours() const { return requiredTrainingHours
 int    TeamLead::getAttendedTrainingHours() const { return attendedTrainingHours; }	
 
 //Mutators
-void TeamLead::setMonthlyBonus(double bonus) { this->monthlyBonus = bonus; }
-void TeamLead::setRequiredTrainingHours(int hours) { this->requiredTrainingHours = hours; }
-void TeamLead::setAttendedTrainingHours(int hours) { this->attendedTrainingHours = hours; }
+void TeamLead::setMonthlyBonus(double bonus) 
+{ 
+	if (bonus < 0)
+		throw InvalidMonthlyBonus();
+	this->monthlyBonus = bonus; 
+}
+void TeamLead::setRequiredTrainingHours(int hours) 
+{ 
+	if (hours < 0)
+		throw InvalidTrainingHours();
+	this->requiredTrainingHours = hours; 
+}
+void TeamLead::setAttendedTrainingHours(int hours) 
+{ 
+	if (hours < 0 || hours > requiredTrainingHours)
+		throw InvalidAttendedTrainingHours();
+	this->attendedTrainingHours = hours; 
+}
 
 //Print function
 void TeamLead::printTeamLead() const

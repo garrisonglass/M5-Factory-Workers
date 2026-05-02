@@ -16,7 +16,7 @@ void createTeamLead();
 
 int main()
 {
-	
+
 	int choice;
 	while (true)
 	{
@@ -28,7 +28,7 @@ int main()
 		cout << "Enter your choice: ";
 		cin >> choice;
 		cin.ignore();//Clear the input buffer
-		
+
 		switch (choice)
 		{
 		case 1:
@@ -41,12 +41,83 @@ int main()
 			createTeamLead();//Create Team Lead
 			break;
 		case 4:
-			cout << "Exiting program." << endl;
+			cout << "Exiting program.\n";
 			return 0;
 		default:
-			cout << "Invalid choice. Please try again." << endl;
+			cout << "Invalid choice. Please try again.\n";
 		}
 	}
+}
+
+void createProductionWorker()
+{
+	string name, date;
+	int id, shift;
+	double pay;
+
+	while (true)
+	{
+		try
+		{
+			cout << "\n--- Enter Production Worker Information ---\n";
+
+			cout << "Enter name: ";
+			getline(cin, name);
+
+			cout << "Enter employee ID (0-9999): ";
+			cin >> id;
+			cin.ignore();
+
+			cout << "Enter hire date (YYYY-MM-DD): ";
+			getline(cin, date);
+
+			cout << "Enter shift (1 for day, 2 for night): ";
+			cin >> shift;
+            cin.ignore();
+			
+			cout << "Enter hourly pay rate: ";
+			cin >> pay;
+			cin.ignore();
+
+			ProductionWorker worker(name, id, date, shift, pay);
+			
+			cout << "\nProduction Worker Information:\n";
+			worker.printProductionWorker();
+			break;
+		}
+		catch (const Employee::InvalidEmployeeID&)
+		{
+			cout << "Error: Invalid employee ID. Please enter a value between 0 and 9999.\n";
+		}
+		catch (const ProductionWorker::InvalidShift&)
+		{
+			cout << "Error: Invalid shift. Please enter 1 (Day) or 2 (Night).\n";
+		}
+		catch (const ProductionWorker::InvalidPayRate&)
+		{
+			cout << "Error: Invalid pay rate. Please enter a non-negative value.\n";
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //	//Creat an Employee object
 //	Employee emp("John Doe", 12345, "2020-01-01");
 //	cout << "Employee Information:" << endl;

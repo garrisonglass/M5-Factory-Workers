@@ -15,7 +15,7 @@ ProductionWorker::ProductionWorker(const string& name, int EmployeeID, const str
 {
 	if (shift != 1 && shift != 2)
 		throw InvalidShift();
-	if (payRate < 0)
+	if (payRate < 12.77)
 		throw InvalidPayRate();
 	
 	    this->shift   = shift;

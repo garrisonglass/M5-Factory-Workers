@@ -120,11 +120,11 @@ void createShiftSupervisor()
 			cout << "Enter name: ";
 			getline(cin, name);
 			
-			cout << "Enter employee ID (0-9999): ";
+			cout << "Enter employee ID: ";
 			cin >> id;
 			cin.ignore();
 			
-			cout << "Enter hire date (YYYY-MM-DD): ";
+			cout << "Enter hire date: ";
 			getline(cin, date);
 			
 			cout << "Enter annual salary: ";
@@ -226,7 +226,7 @@ void createTeamLead()
 		}
 		catch (const ProductionWorker::InvalidPayRate&)
 		{
-			cout << "Error: Invalid pay rate. Please enter a non-negative value.\n";
+			cout << "Error: Invalid pay rate. Please enter a value greater than or equal to the minimum wage in Va of $12.77.\n";
 			cin  >> payRate;
 			cin.ignore();
 		}

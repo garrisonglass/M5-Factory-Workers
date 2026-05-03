@@ -6,7 +6,7 @@
 class ProductionWorker : public Employee	
 {
 	private:
-		int shift; //1 for day shift, 2 for night shift
+		int shift;//1 for day shift, 2 for night shift
 		double payRate;
 
 public:

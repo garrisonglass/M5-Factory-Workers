@@ -102,7 +102,7 @@ void createProductionWorker()
 		}
 		catch (const ProductionWorker::InvalidPayRate&)
 		{
-			cout << "Error: Invalid pay rate. Please enter a non-negative value.\n";
+			cout << "Error: Invalid pay rate. Please enter a value greater than or equal to the minimum wage in Va of $12.77.\n";
 			cin >> pay;
 			cin.ignore();
 		}

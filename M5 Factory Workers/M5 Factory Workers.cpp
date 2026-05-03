@@ -30,7 +30,6 @@ int main()
 		cin >> choice;
 		cin.ignore();//Clear the input buffer
 
-
 		switch (choice)
 		{
 		case 1:

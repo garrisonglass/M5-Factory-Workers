@@ -31,7 +31,7 @@ void ProductionWorker::setShift(int shift)
 
 void ProductionWorker::setPayRate(double payRate) 
 {
-	if (payRate < 0)
+	if (payRate < 12.77)
 		throw InvalidPayRate();
 	this->payRate = payRate; 
 }
